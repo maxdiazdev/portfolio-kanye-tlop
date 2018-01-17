@@ -1,0 +1,211 @@
+@font-face {
+  font-family: 'bebasneue';
+  src: url("../fonts/bebasneue/bebasneue_bold.eot");
+  src: url("../fonts/bebasneue/bebasneue_bold.eot?#iefix") format("embedded-opentype"), url("../fonts/bebasneue/bebasneue_bold.woff") format("woff"), url("../fonts/bebasneue/bebasneue_bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #191645;
+  background-image: url("http://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+}
+
+h2 {
+  font-family: 'bebasneue';
+  line-height: 0.85;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+h2:nth-child(1) {
+  font-size: 3vw;
+}
+
+h2:nth-child(2) {
+  font-size: 6vw;
+  margin-left: 9vw;
+}
+
+h2:nth-child(3) {
+  font-size: 8.8vw;
+  margin-left: 9vw;
+}
+
+.center {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#albumBox, #creditsBox, #vinyl {
+  width: 50vw;
+  height: 50vw;
+}
+
+#albumBox {
+  background-color: #df0044;
+  border-radius: 3px;
+}
+
+#albumBox:before {
+  content: '';
+  width: calc(100% + 3px);
+  height: calc(100% + 3px);
+  background-color: #700022;
+  box-shadow: -10px 10px 20px rgba(45, 44, 65, 0.5);
+  border-radius: 8px;
+  position: relative;
+  left: -3px;
+  display: block;
+  z-index: -15;
+}
+
+#titleVideo {
+  width: 70%;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#creditsBox {
+  color: #C8C6D3;
+  background-color: #1c184d;
+  background-image: url(../img/kanye.png);
+  background-repeat: no-repeat;
+  background-position: -45% 100%;
+  background-size: 65%;
+  border-radius: 5px;
+  box-shadow: -10px 10px 20px rgba(45, 44, 65, 0.5);
+  padding: 2vw;
+  position: fixed;
+  z-index: -5;
+  /* When position switches, z-index jolts in Safari. Here's a fix: */
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+#artist {
+  position: absolute;
+  top: 50%;
+  right: 15%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.collaborators {
+  font-family: 'bebasneue';
+  font-size: 1.08vw;
+  width: calc(33.3333% - 10px);
+  float: left;
+}
+
+.collaborators:not(:last-child) {
+  margin-right: 15px;
+}
+
+#vinyl {
+  background-image: linear-gradient(230deg, #333 10%, #000 50%);
+  border: 5px solid #000;
+  border-radius: 50%;
+  box-shadow: -10px 10px 20px rgba(45, 44, 65, 0.5);
+  box-sizing: border-box;
+  position: fixed;
+  z-index: -10;
+}
+
+.inner-circle {
+  border: 5px solid #000;
+  border-radius: 50%;
+}
+
+.inner-circle:nth-child(1) {
+  width: 90%;
+  height: 90%;
+}
+
+.inner-circle:nth-child(2) {
+  width: 80%;
+  height: 80%;
+}
+
+.inner-circle:nth-child(3) {
+  width: 70%;
+  height: 70%;
+}
+
+#label {
+  width: 50%;
+  height: 50%;
+  background-color: #df0044;
+  border: 3px solid #700022;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#label img {
+  width: 70%;
+  position: absolute;
+  left: 30%;
+  bottom: -50%;
+  -webkit-filter: contrast(130%) opacity(80%);
+          filter: contrast(130%) opacity(80%);
+}
+
+#salesPitch {
+  font-family: 'bebasneue';
+  font-size: 2.5vw;
+  color: #C8C6D3;
+  text-align: center;
+  width: 100%;
+  border-bottom: 3px solid #C8C6D3;
+  padding-bottom: 5px;
+  position: absolute;
+  bottom: -205%;
+}
+
+@media screen and (max-width: 1000px) {
+  h2:nth-child(1) {
+    font-size: 4vw;
+    margin-bottom: 0.5vw;
+  }
+  h2:nth-child(2) {
+    font-size: 8vw;
+    margin-left: 12vw;
+  }
+  h2:nth-child(3) {
+    font-size: 13vw;
+    margin-left: 12vw;
+  }
+  #albumBox, #creditsBox, #vinyl {
+    width: 70vw;
+    height: 70vw;
+  }
+  #creditsBox {
+    padding: 3.5vw;
+  }
+  .collaborators {
+    font-size: 1.5vw;
+  }
+  #salesPitch {
+    font-size: 4vw;
+  }
+}
+
+/* Color correct album cover to match video rendered in Safari */
+@supports (overflow: -webkit-marquee) and (justify-content: inherit) {
+  #albumBox, #label {
+    background-color: #f6004b;
+  }
+}
