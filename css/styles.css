@@ -16,6 +16,34 @@ body {
   background-image: url(../img/45-degree-fabric-light.png);
 }
 
+h1 {
+  font-family: 'bebasneue';
+  line-height: 0.82;
+  letter-spacing: 0.5px;
+  margin: 0;
+  background: linear-gradient(230deg, #333 40%, #000 0%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+h1:nth-child(1) {
+  font-size: 3.6vw;
+  margin-top: 2px;
+  margin-left: -3vw;
+}
+
+h1:nth-child(2) {
+  font-size: 6.6vw;
+}
+
+h1:nth-child(3) {
+  font-size: 9.8vw;
+  margin-top: -4px;
+}
+
 h2 {
   font-family: 'bebasneue';
   line-height: 0.85;
@@ -79,6 +107,12 @@ h2:nth-child(3) {
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+#albumTitle {
+  position: absolute;
+  bottom: 10%;
+  right: 8%;
 }
 
 #creditsBox {
@@ -178,28 +212,48 @@ h2:nth-child(3) {
 }
 
 @media screen and (max-width: 1000px) {
+  h1:nth-child(1) {
+    font-size: 4vw;
+    margin-left: -3.2vw;
+  }
+
+  h1:nth-child(2) {
+    font-size: 9vw;
+  }
+
+  h1:nth-child(3) {
+    font-size: 14vw;
+    margin-top: -3px;
+  }
+
   h2:nth-child(1) {
     font-size: 4vw;
     margin-bottom: 0.5vw;
   }
+
   h2:nth-child(2) {
     font-size: 8vw;
     margin-left: 12vw;
   }
+
   h2:nth-child(3) {
     font-size: 13vw;
     margin-left: 12vw;
   }
+
   #albumBox, #creditsBox, #vinyl {
     width: 70vw;
     height: 70vw;
   }
+
   #creditsBox {
     padding: 3.5vw;
   }
+
   .collaborators {
     font-size: 1.5vw;
   }
+
   #salesPitch {
     font-size: 4vw;
   }
@@ -213,6 +267,18 @@ h2:nth-child(3) {
 }
 
 @media screen and (min-width: 1500px) {
+  h1:nth-child(1) {
+    font-size: 55px;
+  }
+
+  h1:nth-child(2) {
+    font-size: 100px;
+  }
+
+  h1:nth-child(3) {
+    font-size: 150px;
+  }
+
   h2:nth-child(1) {
     font-size: 45px;
   }
