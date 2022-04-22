@@ -301,4 +301,8 @@ h2:nth-child(3) {
     font-size: 16px;
     width: calc(33% - 8px);
   }
+
+  #salesPitch {
+    font-size: 40px;
+  }
 }
